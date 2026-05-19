@@ -1,0 +1,21 @@
+{
+  "name": "orbitport-starter-kit",
+  "version": "1.0.0",
+  "description": "Working examples for the SpaceComputer Orbitport API and IPFS beacon",
+  "type": "module",
+  "scripts": {
+    "hello": "node examples/01-hello-ctrng.mjs",
+    "beacon": "node examples/02-ipfs-beacon.mjs",
+    "password": "node examples/03-generate-password.mjs",
+    "dice": "node examples/04-dice-roll.mjs",
+    "verify": "node examples/05-verify-signature.mjs",
+    "kms": "node examples/07-kms-signing.mjs"
+  },
+  "dependencies": {
+    "@spacecomputer-io/orbitport-sdk-ts": "^0.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}

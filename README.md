@@ -1,6 +1,6 @@
 # Orbitport Starter Kit
 
-Get cosmic randomness from SpaceComputer satellites into your app. Five examples, zero frameworks.
+Get cosmic randomness and orbital key management from SpaceComputer satellites into your app.
 
 ## What this is
 
@@ -22,9 +22,10 @@ node examples/02-ipfs-beacon.mjs
 
 That pulls the latest beacon block and prints the random hex string. Takes about 2 seconds.
 
-If you want the authenticated API (higher throughput, signed responses), get credentials from [accounts.spacecomputer.io](https://accounts.spacecomputer.io), then:
+For authenticated examples (API, KMS), install dependencies and add credentials:
 
 ```bash
+npm install
 cp .env.example .env
 # fill in your CLIENT_ID and CLIENT_SECRET
 node examples/01-hello-ctrng.mjs
@@ -39,6 +40,7 @@ node examples/01-hello-ctrng.mjs
 | `03-generate-password.mjs` | Generates a password from beacon entropy | No |
 | `04-dice-roll.mjs` | Dice roll from beacon entropy, provably fair | No |
 | `05-verify-signature.mjs` | Fetches signed randomness, inspects the signature | Yes |
+| `07-kms-signing.mjs` | Creates a signing key in orbit, signs a message, encrypts data | Yes + SDK |
 
 ## How it connects
 
@@ -54,7 +56,7 @@ Your app
 
 ## Environment variables
 
-Only needed for examples 01 and 05:
+Only needed for examples 01, 05, and 07:
 
 ```env
 ORBITPORT_CLIENT_ID=your-client-id
@@ -69,6 +71,7 @@ Make sure `AUTH_URL` points to `auth.*` and `API_URL` points to `op.*`. Swapping
 
 - [What is cTRNG?](docs/what-is-ctrng.md) - plain English explainer
 - [API reference](docs/api-reference.md) - endpoints, response formats, error codes
+- [What can you build?](docs/what-can-you-build.md) - use cases with working code snippets
 - [Troubleshooting](docs/troubleshooting.md) - real issues I hit while building this, with fixes
 
 ## SpaceComputer repos
