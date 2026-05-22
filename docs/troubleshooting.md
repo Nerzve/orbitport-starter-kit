@@ -27,6 +27,19 @@ Your credentials don't match the Auth0 tenant you're hitting. If you got credent
 
 ---
 
+### `JSON-RPC HTTP error 400` (API_ERROR) when running KMS
+
+If you run the KMS signing example (`07-kms-signing.mjs`) and get this:
+
+```
+Error: JSON-RPC HTTP error 400
+Code: API_ERROR
+```
+
+**Fix:** Your API credentials don't have KMS permissions enabled yet.
+
+---
+
 ## Swapped `API_URL` and `AUTH_URL`
 
 Various confusing failures. Auth endpoint returns HTML, wrong audience, etc.
